@@ -1,0 +1,38 @@
+<%- include('./partials/head') %>
+
+    <body>
+        <div id="root"></div>
+        <h1>
+            <%= title %>
+        </h1>
+        <h2> <a href="http://localhost:3000/books/all">Back to All Books</a></h2>
+        <div class="card-holder">
+            <h3>
+                <%= sbook.name %>
+            </h3>
+            <p>
+                <%= sbook.author %>
+            </p>
+
+            <p><a href="http://localhost:3000/books/genre/<%= sbook.genre %>">
+                    <%= sbook.genre %>
+                </a></p>
+            
+            <p>
+                <%= sbook.rating %> out of 5 Stars
+            </p>
+
+            <p>
+                <%= sbook.time %> Days to Complete
+            </p>
+
+            <button id="update-book-btn">Edit</button>
+            <button type="button" id="delete-book-btn" value=<%=sbook.id %> >Delete</button>
+        </div>
+        <button id="new-book-btn">New</button>
+        <%- include('./partials/new-book') %>
+        <%- include('./partials/update-book') %>
+    </div>
+    </body>
+
+    </html>

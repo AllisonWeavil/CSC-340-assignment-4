@@ -1,0 +1,51 @@
+<%- include('./partials/head') %>
+
+    <body>
+        <h1>
+            <%= title %>
+        </h1>
+        <div id="root">
+            <div class="button-container">
+                <button id="new-book-btn">Add New Book</button>
+            </div>
+            <%- include('./partials/new-book') %>
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name </th>
+                        <th>Author </th>
+                        <th>Genre </th>
+                        <th>Rating </th>
+                        <th>Time Spent Reading in Days</th>
+                    </tr>
+                    <% for (const sbook of book){ %>
+                        <tr>
+                            <td>
+                                <a href="http://localhost:3000/books/item/<%= sbook.id %>">
+                                    <%= sbook.id %>
+                                </a>
+                            </td>
+                            <td>
+                                <%= sbook.name %>
+                            </td>
+                            <td>
+                                <%= sbook.author %>
+                            </td>
+                            <td>
+                                <a href="http://localhost:3000/books/genre/<%= sbook.genre %>">
+                                    <%= sbook.genre %>
+                                </a>
+                            </td>
+                            <td>
+                                <%= sbook.rating %>
+                            </td>
+                            <td>
+                                <%= sbook.time %>
+                            </td>
+                        </tr>
+                        <% } %>
+                </table>
+        </div>
+    </body>
+
+    </html>

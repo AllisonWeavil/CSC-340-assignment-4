@@ -1,0 +1,19 @@
+<div id="update-form-popup">
+    <form id="update-form-container">
+        <h1>Edit Book</h1>
+        <label for="id"> </label>
+        <input id="id" type="number" placeholder="ID" name="id" value= <%= sbook.id %> readonly>
+        <label for="name"> </label>
+        <input id="name" type="text" placeholder="Name" name="name" value= <%= sbook.name %>>
+        <label for="author"></label>
+        <input id="author" type="text" placeholder="Author" name="author" value= <%= sbook.author %>>
+        <label for="genre"></label>
+        <input id="genre" type="text" placeholder="Genre" name="genre" value= <%= sbook.genre %>>
+        <label for="rating"></label>
+        <input id="rating" type="number" min="0" step="0.25" placeholder="Rating" name="rating" value= <%= sbook.rating %>>
+        <label for="time"></label>
+        <input id="time" type="number" min="0" step="1" placeholder="Time Spent in Days" name="time"value= <%= sbook.time %>>
+        <button class="btn" id="update-save-book" type="submit" value=<%=sbook.id %>>Update</button>
+        <button id="update-cancel-btn" type="button">Close</button>
+    </form>
+</div>
